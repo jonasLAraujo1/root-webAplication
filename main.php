@@ -62,7 +62,7 @@
 <body>
   <?php
   session_start();
-  #echo $_SESSION['user'];
+
   if (!isset($_SESSION['user'])){
     ?>
     <div class="alert alert-dark" style="width: 70%;margin-left: 15%;" role="alert">
@@ -75,29 +75,28 @@
 
   else{?>
     <!--MENU INICIO  bg-light-->
-    <div class="card" style="width: 100%;background-color: #12a9fa">
+    <div class="card" style="width: 100%;background-color: #28a745">
       <div class="card-body" >
-        <div class="navbar navbar-light " style="background-color: #12a9fa"  >
-          <form class=" bg-light  form-inline " >
-            <a href="#"><button class=" btn btn-lg btn-outline-info active" type="button" >Inicio</button> </a>
+        <div class="navbar navbar-light " style="background-color: #28a745"  >
+          <form class=" form-inline " >
+            <a href="#"><button class=" btn btn-lg  active" type="button" >Inicio</button> </a>
             <ul class="nav" style=" margin: 0px 5px"></ul>
-            <a href="./formularios/FormularioMarcar.php"> <button class=" btn  btn-lg btn-outline-info" type="button" >Agendar Reunião</button> </a>
-            <a href="#"><button type="button" class="btn btn-lg btn-primary">Notificações <span class="badge badge-light">3</span></button></a>
+            <a href="./formularios/FormularioMarcar.php"> <button class=" btn btn-lg " type="button" >Agendar Reunião</button> </a>
+            <!--<a href="#"><button type="button" class="btn btn-lg btn-primary">Notificações <span class="badge badge-light">3</span></button></a>-->
           </form>
           <h1>Agenda de Reuniões</h1>
-          
           <form class="form-inline"  method="POST" action="./formularios/listaPesquisa.php">
-            <input class="form-control-sm" type="name" placeholder="id range" name="busca" aria-label="Search">
+            <input class=" form-control " type="name" placeholder="id range" name="busca" aria-label="Search">
             <ul class="nav" style=" margin: 0px 5px"></ul>
-            <button class="btn outline-primary" type="submit">Buscar</button>
+            <button class="btn btn-utline-primary" type="submit">Buscar</button>
           </form>
 
         </div>
       </div>
     </div>
     <!--MENU FIM -->
-    <div class="card" style="width: 100%;background-color: #82f9fa">
-      <div class="card" style="width: 80%;margin-left: 10%;background-color: #Fcf9fa">
+    <div class="card" style="width: 100%;background-color: #81C784">
+      <div class="card" style="width: 80%;margin-left: 10%">
         <div class="card-body">
           <div  id='calendar' style="text-transform: capitalize;"></div>
         </div>
