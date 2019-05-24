@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<HTML lang="pt-br">
+<HEAD>
+  <title>Login</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+</HEAD>
+<BODY>		
+  <!--MENU INICIO -->
+  <div class="card" style="width: 100%;background-color: #f8f9fa">
+    <div class="card-body">
+      <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+          <a href="#"><button class="btn btn-lg btn-outline-info active" type="button" >Inicio</button> </a>
+          <ul class="nav" style="margin: 0px 5px"></ul>
+          <a href="./formularios/cadastrarUsuario.html"> <button class="btn btn-lg btn-outline-info " type="button" >Cadastrar</button> </a>
+        </form>
+      </nav>
+    </div>
+  </div>
+  <!--MENU FIM -->
+  <div class="card" style="width: 50% ; margin-left: 25%;background-color: #f8f9fa">
+    <div class="card-body">
+      <h2>Login</h2>
+      <form class="form-inline" method="POST"  action="./formularios/logar.php">
+        <ul>
+          <ol>Usuario</ol>
+          <ol><input type="text" name="form_usuario" required name=form_usuario class="form-control"></ol>
+          <ol>Senha</ol>
+          <ol><input type="password" name="form_senha" required name=form_senha class="form-control"></ol>
+          <ol><br></ol>
+          <ol><input class="btn outline-primary" value="Logar" type="submit"></ol>
+        </ul>
+      </form>
+    </div>
+  </div>
+</BODY>
+</HTML>  	

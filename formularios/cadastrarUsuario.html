@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<HTML lang="pt-br">
+<HEAD>
+  <title>Cadastro</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+</HEAD>
+<BODY>
+  <!--MENU INICIO -->
+  <div class="card" style="width: 100%;background-color: #f8f9fa">
+    <div class="card-body">
+      <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" >
+          <a href="../"><button class="btn btn-lg btn-outline-info" type="button" >Inicio</button> </a>
+          <ul class="nav" style="margin: 0px 5px"></ul>
+          <a href="#"> <button class="btn btn-lg btn-outline-info active" type="button" >Cadastrar</button> </a>
+        </form>
+      </nav>
+    </div>
+  </div>
+  <!--MENU FIM -->
+  <div class="card" style="width: 50% ; margin-left: 25%;background-color: #f8f9fa">
+    <div class="card-body">
+      <h2>Cadastrar Usuario</h2>
+      <form class="form-inline" method="POST"  action="ligacao_banco_cadastrar.php">
+        <ul>
+          <ol>Nome</ol>
+          <ol><input type="text" name="nome_usuario" required name=nome_usuario class="form-control"></ol>
+          <ol><br></ol>
+          <ol>SIAPE ou CPF</ol>
+          <ol><input type="text" name="registro" required name=registro class="form-control"></ol>
+          <ol><br></ol>
+          <ol>Email</ol>
+          <ol><input type="text" name="email_usuario" required name=email_usuario class="form-control"></ol>
+          <ol><br></ol>
+          <ol>Senha</ol>
+          <ol><input type="password" name="senha_usuario" required name=senha_usuario class="form-control"></ol>
+          <ol><br></ol>
+          <ol>Lotação</ol>
+          <ol><input type="text" name="lotacao_usuario" required name=lotacao_usuario  class="form-control"></ol>
+          <ol><br></ol>
+          <ol><input class="btn outline-primary" value="Confirmar" type="submit"></ol>
+        </ul>
+      </form>
+    </div>
+  </div>
+</BODY>
+</HTML>  	
