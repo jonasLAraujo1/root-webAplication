@@ -4,11 +4,13 @@
   <title>Novo Usuario</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="../css/bootstrap.css" />
-  <meta http-equiv="refresh" content=2;url="../index.html">
+  <meta http-equiv="refresh" url="../index.html"> <!--content=2; -->
 </head>
 <body>
   <?php
   include_once '../conectarBanco.php';
+  echo session_status();
+  echo "<br>";
   $usuario=$_POST['form_usuario'];
   $sql = "SELECT registro_usuario ,nome_usuario, senha FROM usuario WHERE registro_usuario='$usuario'";
   $query = mysqli_query($conexao,$sql)or die("Erro 1");
@@ -16,7 +18,10 @@
   if ($r > 0){
     while($resultado = mysqli_fetch_array($query)){
       if ($usuario==$resultado['registro_usuario'] and $_POST['form_senha'] ==$resultado['senha']) {
-        @session_start();
+        session_start();
+        $_SESSION['user'] = $usuario;
+        echo $_SESSION['user'];
+        #echo session_status();
         header("location: ../main.php");
       }
       else{

@@ -12,6 +12,20 @@
 	?>
 </head>
 <body>
+	<?php
+	session_start();
+  #echo $_SESSION['user'];
+  if (!isset($_SESSION['user'])){
+    ?>
+    <div class="alert alert-dark" style="width: 70%;margin-left: 15%;" role="alert">
+      <h3 class="alert-heading">Você precisa fazer LOGIN primeiro</h3>
+      <hr>
+      <a href="index.html"><button class=" btn btn-lg btn-outline-info active" type="button" >Login</button> </a>
+    </div>
+    <?php
+  }
+
+  else{?>
 	<!--MENU INICIO -->
 	<div class="card" style="width: 100%;background-color: #f8f9fa">
 		<div class="card-body">
@@ -104,5 +118,6 @@
 			</form>
 		</div>
 	</div>
+	<<?php } ?>
 </body>
 </html>
